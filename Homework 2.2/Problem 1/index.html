@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Problem 1/style.css">
+    <title>Multi-Level Filter</title>
+</head>
+
+<body>
+    <div id="buttons" class="button-container">
+        <button class="btn" onclick="filterObjects('all')">All</button>
+        <button class="btn" onclick="filterObjects('Fruits')">Fruits</button>
+        <button class="btn" onclick="filterObjects('Animals')">Animals</button>
+        <button class="btn" onclick="filterObjects('Colors')">Colors</button>
+    </div>
+
+    <div class="objects-container">
+        <div class="box Fruits">Apple</div>
+        <div class="box Animals">Lion</div>
+        <div class="box Colors">Blue</div>
+        <div class="box Fruits">Orange</div>
+        <div class="box Animals">Elephant</div>
+        <div class="box Colors">Red</div>
+        <div class="box Fruits">Banana</div>
+        <div class="box Animals">Tiger</div>
+        <div class="box Colors">Green</div>
+    </div>
+
+    <script src="make-multi-filter.js"></script>
+</body>
+
+</html>

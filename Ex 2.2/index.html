@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+</head>
+
+<body>
+    <div id="formArea"></div>
+</body>
+<script>
+   function createForm() {
+    const form = document.createElement("form");
+    form.id = "formCheck";
+    
+    // Name field
+    const nameLabel = document.createElement("label");
+    nameLabel.textContent = "Name";
+    const inputName = document.createElement("input");
+    inputName.type = "text";
+    inputName.id = "Name";
+    nameLabel.appendChild(inputName);
+    form.appendChild(nameLabel);
+
+    // Phone field
+    const phoneLabel = document.createElement("label");
+    phoneLabel.textContent = "Phone";
+    const inputPhone = document.createElement("input");
+    inputPhone.type = "tel"; // Assuming it's a phone number
+    inputPhone.id = "Phone";
+    phoneLabel.appendChild(inputPhone);
+    form.appendChild(phoneLabel);
+
+    // Age field
+    const ageLabel = document.createElement("label");
+    ageLabel.textContent = "Age";
+    const inputAge = document.createElement("input");
+    inputAge.type = "number";
+    inputAge.id = "Age";
+    ageLabel.appendChild(inputAge);
+    form.appendChild(ageLabel);
+
+    // Date of Birth field
+    const dobLabel = document.createElement("label");
+    dobLabel.textContent = "Date of Birth";
+    const inputDOB = document.createElement("input");
+    inputDOB.type = "date";
+    inputDOB.id = "DOB";
+    dobLabel.appendChild(inputDOB);
+    form.appendChild(dobLabel);
+
+    // Submit button
+    const submit = document.createElement("input");
+    submit.type = "submit";
+    submit.value = "Submit";
+    submit.id = "submit";
+    form.appendChild(submit);
+
+    // Append form to the formArea
+    document.getElementById("formArea").appendChild(form);
+
+    // Event listener for form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Access form values
+        const nameValue = inputName.value;
+        const phoneValue = inputPhone.value;
+        const ageValue = inputAge.value;
+        const dobValue = inputDOB.value;
+
+        // You can now do something with the form values, e.g., send them to a server or perform validation.
+        alert(`Submit successful!\nName: ${nameValue}\nPhone: ${phoneValue}\nAge: ${ageValue}\nDate of Birth: ${dobValue}`);
+    });
+}
+
+createForm();
+
+</script>
+
+</html>
